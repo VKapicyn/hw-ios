@@ -9,7 +9,7 @@ import Foundation
 
 class NoteLoader {
     
-    private let baseURL = "https://reqres.in/api/"
+    private let baseURL = "https://reqres.in/api"
     private let session = URLSession.shared
     private var loadUsers: [User] = []
     
