@@ -8,6 +8,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--User View Controller-->
+        <scene sceneID="pHB-Tg-8JJ">
+            <objects>
+                <viewController id="ZXw-ia-9Q4" customClass="UserViewController" customModule="Lesson_5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="59y-NC-adY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4v4-L4-RCq">
+                                <rect key="frame" x="10" y="32" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="AUd-vX-Lm6"/>
+                                    <constraint firstAttribute="height" constant="100" id="kly-E8-PUo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2H-ud-4YK">
+                                <rect key="frame" x="10" y="142" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndv-dP-r94">
+                                <rect key="frame" x="10" y="168" width="31" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zbF-wj-23X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v2H-ud-4YK" firstAttribute="leading" secondItem="zbF-wj-23X" secondAttribute="leading" constant="10" id="0JI-FZ-6yR"/>
+                            <constraint firstItem="Ndv-dP-r94" firstAttribute="top" secondItem="v2H-ud-4YK" secondAttribute="bottom" constant="5" id="hpV-lT-oAn"/>
+                            <constraint firstItem="4v4-L4-RCq" firstAttribute="leading" secondItem="zbF-wj-23X" secondAttribute="leading" constant="10" id="pN8-AZ-2ul"/>
+                            <constraint firstItem="Ndv-dP-r94" firstAttribute="leading" secondItem="zbF-wj-23X" secondAttribute="leading" constant="10" id="pji-47-dob"/>
+                            <constraint firstItem="v2H-ud-4YK" firstAttribute="top" secondItem="4v4-L4-RCq" secondAttribute="bottom" constant="10" id="spH-pm-8Vi"/>
+                            <constraint firstItem="4v4-L4-RCq" firstAttribute="top" secondItem="zbF-wj-23X" secondAttribute="top" constant="32" id="tuC-jg-p65"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="Ndv-dP-r94" id="lHu-qc-xoF"/>
+                        <outlet property="nameLabel" destination="v2H-ud-4YK" id="TGM-Jg-MNx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzp-qK-Zjx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.79999999999995" y="113.79310344827587"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -19,6 +67,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="142" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B5h-zo-uKm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="L8v-xY-XuB">
+                                    <rect key="frame" x="0.0" y="198" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="142" id="UUM-ma-5fQ" customClass="NoteTableViewCell" customModule="Lesson_5" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="142"/>
@@ -73,6 +126,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

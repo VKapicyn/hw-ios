@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5406802600FA3B00B10CA0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B54067F2600FA3B00B10CA0 /* UserViewController.swift */; };
 		D50820D225ED244E00FC23AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50820D125ED244E00FC23AB /* AppDelegate.swift */; };
 		D50820D425ED244E00FC23AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50820D325ED244E00FC23AB /* SceneDelegate.swift */; };
 		D50820D625ED244E00FC23AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50820D525ED244E00FC23AB /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B54067F2600FA3B00B10CA0 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D50820CE25ED244E00FC23AB /* Lesson_5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson_5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50820D125ED244E00FC23AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D50820D325ED244E00FC23AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				D5EA1FAF25FF88E700DEA654 /* Note.swift */,
 				D5EA1FB225FF891B00DEA654 /* Loader.swift */,
 				D50820D525ED244E00FC23AB /* ViewController.swift */,
+				2B54067F2600FA3B00B10CA0 /* UserViewController.swift */,
 				D50820D725ED244E00FC23AB /* Main.storyboard */,
 				D50820DA25ED244F00FC23AB /* Assets.xcassets */,
 				D50820DC25ED244F00FC23AB /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5406802600FA3B00B10CA0 /* UserViewController.swift in Sources */,
 				D5EA1FB025FF88E700DEA654 /* Note.swift in Sources */,
 				D50820E725ED2A1A00FC23AB /* NoteTableViewCell.swift in Sources */,
 				D5EA1FB325FF891B00DEA654 /* Loader.swift in Sources */,
