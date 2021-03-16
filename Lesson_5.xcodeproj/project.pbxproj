@@ -14,7 +14,7 @@
 		D50820DB25ED244F00FC23AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50820DA25ED244F00FC23AB /* Assets.xcassets */; };
 		D50820DE25ED244F00FC23AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50820DC25ED244F00FC23AB /* LaunchScreen.storyboard */; };
 		D50820E725ED2A1A00FC23AB /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50820E625ED2A1A00FC23AB /* NoteTableViewCell.swift */; };
-		D5EA1FB025FF88E700DEA654 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA1FAF25FF88E700DEA654 /* Note.swift */; };
+		D5EA1FB025FF88E700DEA654 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA1FAF25FF88E700DEA654 /* User.swift */; };
 		D5EA1FB325FF891B00DEA654 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA1FB225FF891B00DEA654 /* Loader.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		D50820DD25ED244F00FC23AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D50820DF25ED244F00FC23AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D50820E625ED2A1A00FC23AB /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
-		D5EA1FAF25FF88E700DEA654 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		D5EA1FAF25FF88E700DEA654 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5EA1FB225FF891B00DEA654 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +65,7 @@
 				D50820D125ED244E00FC23AB /* AppDelegate.swift */,
 				D50820D325ED244E00FC23AB /* SceneDelegate.swift */,
 				D50820E625ED2A1A00FC23AB /* NoteTableViewCell.swift */,
-				D5EA1FAF25FF88E700DEA654 /* Note.swift */,
+				D5EA1FAF25FF88E700DEA654 /* User.swift */,
 				D5EA1FB225FF891B00DEA654 /* Loader.swift */,
 				D50820D525ED244E00FC23AB /* ViewController.swift */,
 				D50820D725ED244E00FC23AB /* Main.storyboard */,
@@ -146,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EA1FB025FF88E700DEA654 /* Note.swift in Sources */,
+				D5EA1FB025FF88E700DEA654 /* User.swift in Sources */,
 				D50820E725ED2A1A00FC23AB /* NoteTableViewCell.swift in Sources */,
 				D5EA1FB325FF891B00DEA654 /* Loader.swift in Sources */,
 				D50820D625ED244E00FC23AB /* ViewController.swift in Sources */,

@@ -9,17 +9,21 @@ import Foundation
 
 class NoteLoader {
     
-    private let baseURL = "https://jsonplaceholder.typicode.com"
+    private let baseURL = "https://reqres.in/api/"
     private let session = URLSession.shared
-    private var loadedNotes: [Note] = []
+    private var loadUsers: [User] = []
     
-    func load(with completion: @escaping ([Note]) -> Void) {
-        guard loadedNotes.count == 0 else {
-            completion(loadedNotes)
+    func getUser() {
+        
+    }
+    
+    func load(with completion: @escaping ([User]) -> Void) {
+        guard loadUsers.count == 0 else {
+            completion(loadUsers)
             return
         }
         
-        let url = URL(string: "\(baseURL)/posts")!
+        let url = URL(string: "\(baseURL)/users")!
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -31,12 +35,12 @@ class NoteLoader {
             }
             
             do {
-                let notes = try JSONDecoder().decode([Note].self, from: data)
+                let responseData = try JSONDecoder().decode(Data.self, from: data)
                 
-                self?.loadedNotes = notes
+                self?.loadUsers = responseData.data
                 
                 DispatchQueue.main.async {
-                    completion(notes)
+                    completion(responseData.data)
                 }
             } catch {
                 print("ERROR!")

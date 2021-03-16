@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var loader = NoteLoader()
-    var data: [Note] = [] {
+    var data: [User] = [] {
         didSet {
             tableView.reloadData()
         }

@@ -14,7 +14,7 @@ class NoteTableViewCell: UITableViewCell {
     @IBOutlet weak var noteTitleLabel: UILabel!
     @IBOutlet weak var noteTextLabel: UILabel!
     
-    func setup(from note: Note) {
+    func setup(from note: User) {
         idLabel.text = String(note.id)
         userIdLabel.text = String(note.userId)
         noteTitleLabel.text = note.title
