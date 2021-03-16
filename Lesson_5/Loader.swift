@@ -12,26 +12,32 @@ class NoteLoader {
     private let baseURL = "https://reqres.in/api"
     private let session = URLSession.shared
     private var loadUsers: [User] = []
-
     
+//    ARC
+
     func getUser(userId: Int, with completion: @escaping (User) -> Void)  {
         let url = URL(string: "\(baseURL)/users/\(userId)")!
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        let task = session.dataTask(with: request) { [weak self] data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             guard let data = data else {
                 return
             }
-            do {
-                let responseData = try JSONDecoder().decode(User.self, from: data)
             
-                completion(responseData)
+            do {
+                let responseData = try JSONDecoder().decode(Data<User>.self, from: data)
+            
+                DispatchQueue.main.async {
+                    completion(responseData.data)
+                }
             } catch {
                 print("ERROR!")
             }
         }
+        
+        task.resume()
     }
     
     func load(with completion: @escaping ([User]) -> Void) {
@@ -52,7 +58,7 @@ class NoteLoader {
             }
             
             do {
-                let responseData = try JSONDecoder().decode(Data.self, from: data)
+                let responseData = try JSONDecoder().decode(Data<[User]>.self, from: data)
                 
                 self?.loadUsers = responseData.data
                 

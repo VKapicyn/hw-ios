@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Data: Codable {
-    let data: [User]
+class Data<T: Codable>: Codable {
+    let data: T
 }
 
 class User: Codable {
