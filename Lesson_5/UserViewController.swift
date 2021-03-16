@@ -11,10 +11,16 @@ class UserViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    var userId = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let loader = NoteLoader()
+        loader.getUser(userId: userId) {user in
+            self.nameLabel.text = "\(user.firstName) \(user.lastName)"
+            self.emailLabel.text = user.email
+        }
         // Do any additional setup after loading the view.
     }
     

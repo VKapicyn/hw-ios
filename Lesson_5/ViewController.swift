@@ -15,6 +15,7 @@ class ViewController: UIViewController {
             tableView.reloadData()
         }
     }
+    var userId = 0
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,6 +29,13 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 150
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newUser" {
+            let user = segue.destination as! UserViewController
+            user.userId = userId
+        }
     }
 
 }
@@ -53,7 +61,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print(indexPath.row)
+        
+        userId = data[indexPath.row].id
+        performSegue(withIdentifier: "newUser", sender: nil)
     }
     
 }
