@@ -9,16 +9,12 @@ import UIKit
 
 class NoteTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var userIdLabel: UILabel!
-    @IBOutlet weak var noteTitleLabel: UILabel!
-    @IBOutlet weak var noteTextLabel: UILabel!
+    @IBOutlet weak var nameTextLabel: UILabel!
+    @IBOutlet weak var emailTextLabel: UILabel!
     
     func setup(from note: Note) {
-        idLabel.text = String(note.id)
-        userIdLabel.text = String(note.userId)
-        noteTitleLabel.text = note.title
-        noteTextLabel.text = note.body
+        nameTextLabel.text = note.title
+        emailTextLabel.text = note.body
     }
     
 }
