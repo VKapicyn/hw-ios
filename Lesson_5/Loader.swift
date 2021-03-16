@@ -12,9 +12,26 @@ class NoteLoader {
     private let baseURL = "https://reqres.in/api"
     private let session = URLSession.shared
     private var loadUsers: [User] = []
+
     
-    func getUser() {
+    func getUser(userId: Int, with completion: @escaping (User) -> Void)  {
+        let url = URL(string: "\(baseURL)/users/\(userId)")!
         
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = session.dataTask(with: request) { [weak self] data, response, error in
+            guard let data = data else {
+                return
+            }
+            do {
+                let responseData = try JSONDecoder().decode(User.self, from: data)
+            
+                completion(responseData)
+            } catch {
+                print("ERROR!")
+            }
+        }
     }
     
     func load(with completion: @escaping ([User]) -> Void) {
@@ -34,7 +51,6 @@ class NoteLoader {
                 return
             }
             
-            print(String(data: data, encoding: String.Encoding.utf8))
             do {
                 let responseData = try JSONDecoder().decode(Data.self, from: data)
                 
