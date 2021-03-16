@@ -34,6 +34,7 @@ class NoteLoader {
                 return
             }
             
+            print(String(data: data, encoding: String.Encoding.utf8))
             do {
                 let responseData = try JSONDecoder().decode(Data.self, from: data)
                 

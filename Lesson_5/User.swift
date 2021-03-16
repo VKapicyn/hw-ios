@@ -14,7 +14,7 @@ class Data: Codable {
 class User: Codable {
     
     let id: Int
-    let email: Int
+    let email: String
     let firstName: String
     let lastName: String
     let avatar: String
