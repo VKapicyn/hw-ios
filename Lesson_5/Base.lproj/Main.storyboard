@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,6 +49,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VGT-mB-2Om"/>
                     <connections>
+                        <outlet property="avatarImageView" destination="4v4-L4-RCq" id="fk1-rx-bti"/>
                         <outlet property="emailLabel" destination="Ndv-dP-r94" id="lHu-qc-xoF"/>
                         <outlet property="nameLabel" destination="v2H-ud-4YK" id="TGM-Jg-MNx"/>
                     </connections>
@@ -123,12 +124,12 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="B5h-zo-uKm" id="eHe-gr-Q6S"/>
-                        <segue destination="ZXw-ia-9Q4" kind="show" identifier="newUser" id="L33-P7-Z0Z"/>
+                        <segue destination="ZXw-ia-9Q4" kind="show" identifier="newUser" id="oDX-En-NXE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="113.79310344827587"/>
+            <point key="canvasLocation" x="-108" y="114"/>
         </scene>
     </scenes>
     <resources>
