@@ -11,6 +11,10 @@ class Data: Codable {
     let data: [User]
 }
 
+class GetUserDataResponse: Codable {
+    let data: User
+}
+
 class User: Codable {
     
     let id: Int

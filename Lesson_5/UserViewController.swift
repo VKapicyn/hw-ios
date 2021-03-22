@@ -6,33 +6,33 @@
 //
 
 import UIKit
+import SDWebImage
 
 class UserViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    var userId = 0
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var userId = 0 {
+        didSet {
+            loadNewUser()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let loader = NoteLoader()
-        loader.getUser(userId: userId) {user in
-            self.nameLabel.text = "\(user.firstName) \(user.lastName)"
-            self.emailLabel.text = user.email
-        }
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func loadNewUser() {
+        let loader = NoteLoader()
+        loader.getUser(userId: userId) { [ weak self ] user in
+            DispatchQueue.main.async {
+                self?.nameLabel.text = "\(user.firstName) \(user.lastName)"
+                self?.emailLabel.text = user.email
+                guard let url = URL(string: user.avatar) else { return }
+                self?.imageView.sd_setImage(with: url, completed: nil)
+            }
+        }
     }
-    */
-
 }

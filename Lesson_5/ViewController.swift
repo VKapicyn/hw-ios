@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         }
     }
     var userId = 0
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -32,14 +32,17 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "newUser" {
-            let user = segue.destination as! UserViewController
-            user.userId = userId
+        guard segue.identifier == "newUser",
+              let user = segue.destination as? UserViewController
+        else {
+            print("Error!!!)0)0))01!")
+            return
         }
+        
+        user.userId = userId
     }
-
+    
 }
-
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 
